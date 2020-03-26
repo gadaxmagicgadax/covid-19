@@ -7,6 +7,7 @@ Prima di tutto bisogna scaricare il file della protezione civile delle regioni n
 $ wget https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv
 
 Lanciare il codice con :
+
 $ python readalldata.py
 
 Verranno creati tanti file quante sono le regioni nel file regioni.txt
