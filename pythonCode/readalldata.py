@@ -28,7 +28,7 @@ for regione in file_reg:
                 else:
                     line_count += 1
                     if row[3] == regione.strip('\n'):
-                        print({row[3]},' is the region and ',regione,'is from the list\n')
+                        # print({row[3]},' is the region and ',regione,'is from the list\n')
                         print(f'Processed {line_count} lines.')
                         if line_reg == 0:
                             regione_writer.writerow(row);
@@ -36,9 +36,9 @@ for regione in file_reg:
                             ti  = row[7]
                             id = row[9]
                             nap = row[11]
-                            dg = row[12]
-                            dec = row[13]
-                            tamp = row[15]
+                            dg = row[13]
+                            dec = row[14]
+                            tamp = row[16]
                             line_reg += 1
                         else:
                             line2print = []
@@ -63,20 +63,24 @@ for regione in file_reg:
                             # totale attualmente positivi
                             tap = rcs_d + ti_d + id_d
                             line2print.append(tap)
+                            # variazione_positivi
+                            line2print.append(row[11])
                             # nuovi_attualmente_positivi
                             nap = to + id_d
                             line2print.append(nap)
                             # dimessi_guariti
-                            dg_d = int(row[12]) - int(dg)
+                            dg_d = int(row[13]) - int(dg)
+                            if dg_d < 0 :
+                               print({row[3]},' is the region and ',{row[0]},' is the date : ',int(row[13]),' - ',int(dg),'\n')
                             line2print.append(dg_d)
                             # deceduti
-                            dec_d = int(row[13]) - int(dec)
+                            dec_d = int(row[14]) - int(dec)
                             line2print.append(dec_d)
                             # totale casi
                             tc = tap + dg_d + dec_d
                             line2print.append(tc)
                             # tamponi
-                            tamp_d = int(row[15]) - int(tamp)
+                            tamp_d = int(row[16]) - int(tamp)
                             line2print.append(tamp_d)
                             # print(line2print)
                             regione_writer.writerow(line2print)
@@ -84,9 +88,9 @@ for regione in file_reg:
                             ti  = row[7]
                             id = row[9]
                             #nap = row[11]
-                            dg = row[12]
-                            dec = row[13]
-                            tamp = row[15]
+                            dg = row[13]
+                            dec = row[14]
+                            tamp = row[16]
                             line_reg += 1
                                 
             file_regione.close()

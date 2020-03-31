@@ -4,7 +4,7 @@ cat "Abruzzo_out.csv" >> alldatanormalised.csv
 cat "Basilicata_out.csv" >> alldatanormalised.csv
 cat "Calabria_out.csv" >> alldatanormalised.csv
 cat "Campania_out.csv" >> alldatanormalised.csv
-cat "Emilia Romagna_out.csv" >> alldatanormalised.csv
+cat "Emilia-Romagna_out.csv" >> alldatanormalised.csv
 cat "Friuli Venezia Giulia_out.csv" >> alldatanormalised.csv
 cat "Lazio_out.csv" >> alldatanormalised.csv
 cat "Liguria_out.csv" >> alldatanormalised.csv
