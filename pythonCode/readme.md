@@ -20,7 +20,7 @@ Il file alldatanormalised.csv puo' essere a questo punto utilizzato con qualsias
 
 Avendo anche i file di ogni regione si possono fare delle analisi comparative con i soli dati delle regioni interessate.
 
-N.B. Al momento il campo data nei file csv non viene trattato e quindi vi risultera' come una stringa. In piu' , proprio ieri 25/03/2020) il file conteneva la data in un'altro formato. Vedro' nei prossimi giorni se riesco a trattare il campo data in qualche modo. Sugegrimenti sono graditi.
+N.B. Al momento il campo data nei file csv non viene trattato e quindi vi risultera' come una stringa. In piu' , proprio ieri 25/03/2020) il file conteneva la data in un'altro formato. Vedro' nei prossimi giorni se riesco a trattare il campo data in qualche modo. Suggerimenti sono graditi.
 
 Andra' tutto bene !
 
