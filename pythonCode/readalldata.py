@@ -31,6 +31,8 @@ for regione in file_reg:
                         # print({row[3]},' is the region and ',regione,'is from the list\n')
                         print(f'Processed {line_count} lines.')
                         if line_reg == 0:
+                            data = row[0]
+                            row[0] = data[0:10]
                             regione_writer.writerow(row);
                             rcs = row[6]
                             ti  = row[7]
@@ -42,7 +44,7 @@ for regione in file_reg:
                             line_reg += 1
                         else:
                             line2print = []
-                            line2print.append(row[0])
+                            line2print.append(row[0][0:10])
                             line2print.append(row[1])
                             line2print.append(row[2])
                             line2print.append(row[3])
