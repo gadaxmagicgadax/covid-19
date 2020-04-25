@@ -7,6 +7,7 @@ file_reg = open("regioni.txt","r");
 
 for regione in file_reg:
     fn_regione = regione.strip('\n') + '_out.csv'
+    print("Elaborazione regione : " + regione)
     with open(fn_regione,'w') as file_regione:
         regione_writer = csv.writer(file_regione, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         with open('dpc-covid19-ita-regioni.csv', mode='r') as csv_file:
@@ -29,7 +30,7 @@ for regione in file_reg:
                     line_count += 1
                     if row[3] == regione.strip('\n'):
                         # print({row[3]},' is the region and ',regione,'is from the list\n')
-                        print(f'Processed {line_count} lines.')
+                        # print(f'Processed {line_count} lines.')
                         if line_reg == 0:
                             data = row[0]
                             row[0] = data[0:10]
